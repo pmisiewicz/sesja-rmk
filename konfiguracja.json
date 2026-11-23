@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.1.1",
+  "najnowsza_wersja": "0.2.0",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Poprawki pierwszego uruchomienia: kreator pobiera tylko modele small i medium, panel transmisji ukryty do końca konfiguracji, czytelny komunikat o braku połączenia.",
+  "opis": "Aplikacja we własnym oknie zamiast przeglądarki, potwierdzenie przy zamykaniu, zapis tekstu i PDF przez okno „Zapisz jako”, ikona aplikacji.",
   "slownik": [
     "Rada Miasta Krakowa",
     "Przewodniczący Rady Miasta Krakowa",
