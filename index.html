@@ -66,8 +66,8 @@
     ol.steps p { margin: 0 0 8px; }
     ol.steps img { display: block; margin: 8px 0 14px; border-radius: 8px; border: 1px solid var(--line); max-width: 100%; height: auto; }
     ol.steps img[src*="gemini-"] { border: 0; border-radius: 0; max-width: min(100%, 640px); }
+    ol.steps img[src*="smartscreen-"] { border: 0; border-radius: 0; max-width: min(100%, 420px); }
     .note { border-left: 4px solid var(--wait); background: var(--surface); padding: 12px 16px; border-radius: 0 8px 8px 0; }
-    .placeholder { border: 2px dashed var(--line); border-radius: 8px; padding: 24px; text-align: center; color: var(--muted); font-size: 14px; }
     dl.faq { display: grid; gap: 14px; margin: 0; }
     dl.faq dt { font-weight: 650; }
     dl.faq dd { margin: 4px 0 0; color: var(--muted); }
@@ -134,8 +134,10 @@
             <div>
               <h3>Uruchom i przejdź ostrzeżenie Windows</h3>
               <p>W folderze kliknij dwukrotnie <strong>SesjaRMK.exe</strong>. Przy pierwszym uruchomieniu Windows może pokazać niebieskie okno „System Windows ochronił ten komputer”. To normalne dla małych, darmowych programów bez płatnego podpisu cyfrowego.</p>
-              <p>Kliknij <strong>Więcej informacji</strong>, a potem <strong>Uruchom mimo to</strong>.</p>
-              <div class="placeholder">[zrzut ekranu okna SmartScreen – zostanie dodany]</div>
+              <p>Kliknij <strong>Więcej informacji</strong>…</p>
+              <img src="img/smartscreen-1.png" alt="Okno SmartScreen „System Windows ochronił ten komputer” z wyróżnionym linkiem Więcej informacji" loading="lazy">
+              <p>…a potem <strong>Uruchom mimo to</strong>. Przy kolejnych uruchomieniach to okno już się nie pokaże.</p>
+              <img src="img/smartscreen-2.png" alt="Okno SmartScreen z nazwą SesjaRMK.exe i wyróżnionym przyciskiem Uruchom mimo to" loading="lazy">
             </div>
           </li>
           <li>
