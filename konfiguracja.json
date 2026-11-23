@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.0",
+  "najnowsza_wersja": "0.2.1",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Aplikacja we własnym oknie zamiast przeglądarki, potwierdzenie przy zamykaniu, zapis tekstu i PDF przez okno „Zapisz jako”, ikona aplikacji.",
+  "opis": "Poprawka: aplikacja otwiera się we własnym oknie także po rozpakowaniu ZIP-a pobranego z internetu (w 0.2.0 zawsze otwierała się przeglądarka). Po rozpakowaniu powstaje jeden folder z programem.",
   "slownik": [
     "Rada Miasta Krakowa",
     "Przewodniczący Rady Miasta Krakowa",
