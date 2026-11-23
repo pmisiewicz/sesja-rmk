@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.2",
+  "najnowsza_wersja": "0.2.3",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Pierwsze uruchomienie: sam panel postępu na środku, okno zmaksymalizowane. Większe odstępy przycisków, okienko ustawień już nie skacze, usuwanie trwającej sesji (Zatrzymaj i usuń), przycisk „Przejdź do transmisji teraz”, link do instrukcji klucza Gemini.",
+  "opis": "Panel „Podsumowanie i pytania” w zakładkach (stan na godzinę, kopiowanie, zamykanie odpowiedzi). Domyślnie dokładniejszy model medium – gdy komputer nie nadąża, transkrypcja sama przechodzi na small i wraca. Sesji na żywo nie trzeba zatrzymywać. Komputer nie usypia, gdy aplikacja czuwa. Poprawki: skaczące okienko Ustawień, powracający panel pierwszego uruchomienia, skaczący pasek narzędzi.",
   "slownik": [
     "Rada Miasta Krakowa",
     "Przewodniczący Rady Miasta Krakowa",
