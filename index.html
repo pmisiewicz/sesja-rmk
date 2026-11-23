@@ -44,6 +44,7 @@
     .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
     .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 10px; font-weight: 650; text-decoration: none; font-size: 17px; }
     .btn.primary { background: var(--accent); color: var(--accent-text); }
+    .dl-icon { width: 20px; height: 20px; flex: none; }
     .btn.ghost { border: 1px solid var(--line); color: var(--text); background: var(--surface); }
     .small { font-size: 14px; color: var(--muted); }
     main .wrap { padding-block: 36px 64px; display: grid; gap: 56px; }
@@ -63,7 +64,8 @@
       background: var(--accent-soft); color: var(--accent); font-weight: 750; }
     ol.steps h3 { margin: 4px 0 6px; font-size: 18px; }
     ol.steps p { margin: 0 0 8px; }
-    ol.steps img { margin-top: 8px; border-radius: 8px; border: 1px solid var(--line); max-width: 100%; height: auto; }
+    ol.steps img { display: block; margin: 8px 0 14px; border-radius: 8px; border: 1px solid var(--line); max-width: 100%; height: auto; }
+    ol.steps img[src*="gemini-"] { border: 0; border-radius: 0; max-width: min(100%, 640px); }
     .note { border-left: 4px solid var(--wait); background: var(--surface); padding: 12px 16px; border-radius: 0 8px 8px 0; }
     .placeholder { border: 2px dashed var(--line); border-radius: 8px; padding: 24px; text-align: center; color: var(--muted); font-size: 14px; }
     dl.faq { display: grid; gap: 14px; margin: 0; }
@@ -82,7 +84,7 @@
       <h1>Sesja na żywo – Rada Miasta Krakowa</h1>
       <p class="lead">Aplikacja sama słucha transmisji sesji Rady Miasta Krakowa i na bieżąco zapisuje, co się mówi, który punkt obrad trwa i jak wypadły głosowania. Po sesji przygotuje podsumowanie i odpowie na pytania o jej przebieg.</p>
       <div class="cta">
-        <a id="download" class="btn primary" href="https://github.com/pmisiewicz/sesja-rmk/releases/latest">⬇ Pobierz dla Windows</a>
+        <a id="download" class="btn primary" href="https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip"><svg class="dl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/><path d="M4 16v3.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V16"/></svg> Pobierz dla Windows</a>
         <a class="btn ghost" href="#jak-zaczac">Jak zacząć</a>
       </div>
       <p class="small">Bezpłatnie. Działa na zwykłym laptopie, bez instalacji i bez uprawnień administratora. Rozpoznawanie mowy odbywa się na Twoim komputerze.</p>
@@ -119,7 +121,7 @@
           <li>
             <div>
               <h3>Pobierz plik ZIP</h3>
-              <p>Kliknij <a href="https://github.com/pmisiewicz/sesja-rmk/releases/latest">Pobierz dla Windows</a> i zapisz plik <strong>SesjaRMK.zip</strong>, np. w folderze <em>Pobrane</em>.</p>
+              <p>Kliknij <a href="https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip">Pobierz dla Windows</a> i zapisz plik <strong>SesjaRMK-windows.zip</strong>, np. w folderze <em>Pobrane</em>.</p>
             </div>
           </li>
           <li>
@@ -148,8 +150,13 @@
             <div>
               <h3>Opcjonalnie: darmowy klucz Gemini do podsumowań</h3>
               <p>Podsumowania i pytania korzystają z AI Google Gemini – bezpłatnie, z dziennym limitem.</p>
-              <p>Wejdź na <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a>, zaloguj się kontem Google, kliknij <strong>Create API key</strong> i skopiuj klucz. W aplikacji otwórz sesję → <strong>Podsumowanie i pytania</strong> → wklej klucz → <strong>Zapisz</strong>.</p>
-              <div class="placeholder">[zrzuty ekranu AI Studio – zostaną dodane]</div>
+              <p>Wejdź na <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> i zaloguj się kontem Google. Kliknij <strong>Create API key</strong> w prawym górnym rogu.</p>
+              <img src="img/gemini-1.png" alt="Google AI Studio, lista kluczy API z wyróżnionym przyciskiem Create API key" loading="lazy">
+              <p>W okienku zostaw proponowaną nazwę, wybierz projekt (przy pierwszym kluczu AI Studio utworzy go samo) i kliknij <strong>Create key</strong>.</p>
+              <img src="img/gemini-2.png" alt="Okno Create a new key z wyróżnionym przyciskiem Create key" loading="lazy">
+              <p>Kliknij <strong>Copy key</strong>. Klucz traktuj jak hasło – nie wysyłaj go innym.</p>
+              <img src="img/gemini-3.png" alt="Okno API key details z ukrytym kluczem i wyróżnionym przyciskiem Copy key" loading="lazy">
+              <p>W aplikacji otwórz dowolną sesję → <strong>✦ Podsumowanie i pytania</strong> → wklej klucz → <strong>Zapisz</strong>. Aplikacja sama sprawdzi, czy działa.</p>
               <p class="small">Bez klucza też możesz korzystać z AI: przycisk „Skopiuj polecenie z transkryptem” przygotuje tekst do wklejenia w ChatGPT, Gemini lub inny czat.</p>
             </div>
           </li>
