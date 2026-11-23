@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.1",
+  "najnowsza_wersja": "0.2.2",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Poprawka: aplikacja otwiera się we własnym oknie także po rozpakowaniu ZIP-a pobranego z internetu (w 0.2.0 zawsze otwierała się przeglądarka). Po rozpakowaniu powstaje jeden folder z programem.",
+  "opis": "Pierwsze uruchomienie: sam panel postępu na środku, okno zmaksymalizowane. Większe odstępy przycisków, okienko ustawień już nie skacze, usuwanie trwającej sesji (Zatrzymaj i usuń), przycisk „Przejdź do transmisji teraz”, link do instrukcji klucza Gemini.",
   "slownik": [
     "Rada Miasta Krakowa",
     "Przewodniczący Rady Miasta Krakowa",
