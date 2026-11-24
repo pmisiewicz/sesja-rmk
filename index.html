@@ -75,6 +75,16 @@
     footer .wrap { padding-block: 24px; font-size: 14px; color: var(--muted); }
     kbd { font: 13px var(--font-ui); background: var(--surface-2); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; }
     @media (max-width: 760px) { .shots, .features { grid-template-columns: 1fr; } ol.steps > li { grid-template-columns: 1fr; } }
+    /* powiększenie zrzutu po kliknięciu */
+    .shots img, ol.steps img { cursor: zoom-in; }
+    dialog.powiekszenie { padding: 0; border: 0; background: transparent; max-width: 96vw; max-height: 96vh; overflow: visible; }
+    dialog.powiekszenie::backdrop { background: rgba(8, 12, 22, .86); }
+    dialog.powiekszenie img { display: block; max-width: 96vw; max-height: 88vh; width: auto; height: auto; border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .5); cursor: zoom-out; background: #fff; }
+    dialog.powiekszenie p { margin: 10px 0 0; text-align: center; color: #e8ecf5; font-size: 14px; }
+    dialog.powiekszenie button { position: fixed; top: 14px; right: 16px; width: 44px; height: 44px; border-radius: 50%; border: 0;
+      background: rgba(255, 255, 255, .14); color: #fff; font-size: 26px; line-height: 1; cursor: pointer; }
+    dialog.powiekszenie button:hover { background: rgba(255, 255, 255, .26); }
   </style>
 </head>
 <body>
@@ -197,5 +207,32 @@
   <footer>
     <div class="wrap">Sesja na żywo – RMK · nieoficjalne narzędzie, niezwiązane z Urzędem Miasta Krakowa · transkrypcja automatyczna, może zawierać błędy.</div>
   </footer>
+  <dialog class="powiekszenie" id="powiekszenie" aria-label="Powiększony zrzut ekranu">
+    <button type="button" aria-label="Zamknij">×</button>
+    <img alt=""><p></p>
+  </dialog>
+  <script>
+    // Zrzuty ekranu: kliknięcie (albo Enter) otwiera powiększenie; zamyka kliknięcie, × albo Esc.
+    (() => {
+      const dlg = document.getElementById("powiekszenie");
+      if (!dlg || !dlg.showModal) return;
+      const duzy = dlg.querySelector("img"), opis = dlg.querySelector("p");
+      const otworz = (img) => {
+        duzy.src = img.currentSrc || img.src;
+        duzy.alt = img.alt;
+        const fig = img.closest("figure");
+        opis.textContent = fig?.querySelector("figcaption")?.textContent || img.alt || "";
+        dlg.showModal();
+      };
+      document.querySelectorAll(".shots img, ol.steps img").forEach((img) => {
+        img.tabIndex = 0;
+        img.setAttribute("role", "button");
+        img.title = "Kliknij, aby powiększyć";
+        img.addEventListener("click", () => otworz(img));
+        img.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); otworz(img); } });
+      });
+      dlg.addEventListener("click", () => dlg.close());
+    })();
+  </script>
 </body>
 </html>
