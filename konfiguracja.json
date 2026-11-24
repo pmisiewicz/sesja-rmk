@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.5",
+  "najnowsza_wersja": "0.2.6",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Podsumowanie AI odporne na przeciążenie Gemini, widoczny postęp generowania, stabilniejsze łącze z transmisją i mniejsze zużycie pamięci",
+  "opis": "Asystent AI ponawia zapytania przy przeciążeniu Gemini i podaje właściwą przyczynę, wygodniejsze pole pytania",
   "slownik": [
     "Gibała",
     "Wałachowski",
