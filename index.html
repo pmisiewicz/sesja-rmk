@@ -40,7 +40,7 @@
     .crest { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 10px; background: var(--accent); color: var(--accent-text); font-weight: 800; font-size: 13px; letter-spacing: .06em; }
     .eyebrow { font-size: 13px; font-weight: 650; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
     h1 { font-size: clamp(30px, 5vw, 46px); margin: 0; letter-spacing: -.02em; }
-    .lead { font-family: var(--font-read); font-size: clamp(18px, 2.2vw, 21px); color: var(--text); max-width: 62ch; margin: 0; }
+    .lead { font-family: var(--font-read); font-size: clamp(18px, 2.2vw, 21px); color: var(--text); margin: 0; }
     .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
     .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 10px; font-weight: 650; text-decoration: none; font-size: 17px; }
     .btn.primary { background: var(--accent); color: var(--accent-text); }
@@ -80,25 +80,25 @@
 <body>
   <header class="hero">
     <div class="wrap">
-      <div class="brand"><span class="crest" aria-hidden="true">RMK</span><span class="eyebrow">Nieoficjalne narzędzie · Windows</span></div>
+      <div class="brand"><span class="crest" aria-hidden="true">RMK</span><span class="eyebrow">Darmowa aplikacja na Windows</span></div>
       <h1>Sesja na żywo – Rada Miasta Krakowa</h1>
       <p class="lead">Aplikacja sama słucha transmisji sesji Rady Miasta Krakowa i na bieżąco zapisuje, co się mówi, który punkt obrad trwa i jak wypadły głosowania. Po sesji przygotuje podsumowanie i odpowie na pytania o jej przebieg.</p>
       <div class="cta">
         <a id="download" class="btn primary" href="https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip"><svg class="dl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/><path d="M4 16v3.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V16"/></svg> Pobierz dla Windows</a>
         <a class="btn ghost" href="#jak-zaczac">Instrukcja instalacji i uruchomienia</a>
       </div>
-      <p class="small">Bezpłatnie. Działa na zwykłym laptopie, bez instalacji i bez uprawnień administratora. Rozpoznawanie mowy odbywa się na Twoim komputerze.</p>
+      <p class="small">Działa na zwykłym laptopie, bez instalacji i bez uprawnień administratora. Rozpoznawanie mowy odbywa się na Twoim komputerze. Projekt niezależny – nie jest usługą Urzędu Miasta Krakowa.</p>
     </div>
   </header>
 
   <main>
     <div class="wrap">
       <section aria-labelledby="co-robi">
-        <h2 id="co-robi">Co robi</h2>
+        <h2 id="co-robi">Co potrafi</h2>
         <div class="features">
           <div class="feature"><h3>Transkrypt na żywo</h3><p>Pełne zdania z godziną wypowiedzi, wyszukiwanie i wygodna kolumna do czytania. Tryb jasny i ciemny.</p></div>
           <div class="feature"><h3>Punkty obrad i głosowania</h3><p>Odczytuje planszę systemu głosowań z transmisji: druk, liczby za/przeciw/wstrzymało się i wynik. Wyniki imienne dociąga z BIP.</p></div>
-          <div class="feature"><h3>Asystent AI</h3><p>Protokolarne podsumowanie i odpowiedzi z odnośnikami do wypowiedzi (darmowy klucz Gemini). Bez klucza – gotowe polecenie do skopiowania do własnego czatu AI.</p></div>
+          <div class="feature"><h3>Asystent AI</h3><p>Po sesji sam przygotowuje protokolarne podsumowanie, a w trakcie odpowiada na pytania z odnośnikami do wypowiedzi (darmowy klucz Gemini). Bez klucza – gotowe polecenie do skopiowania do własnego czatu AI.</p></div>
           <div class="feature"><h3>Bez opieki</h3><p>Sama zaczyna zapis, gdy zacznie się sesja, i kończy po niej. Zanik internetu czy restart komputera nie przerywa zapisu sesji.</p></div>
           <div class="feature"><h3>Archiwum i PDF</h3><p>Każda sesja zostaje w archiwum na komputerze. Dwa pliki PDF: transkrypt sformatowany jak w aplikacji oraz podsumowanie z przebiegiem i głosowaniami (z wynikami imiennymi).</p></div>
           <div class="feature"><h3>Odtworzenie archiwum</h3><p>Dowolną archiwalną sesję z BIP można odtworzyć tak, jakby trwała na żywo – dobre do pokazania, jak to działa.</p></div>
@@ -144,6 +144,7 @@
             <div>
               <h3>Pierwsze uruchomienie</h3>
               <p>Aplikacja otworzy się we własnym oknie. Za pierwszym razem aplikacja pobiera model rozpoznawania mowy (ok. 1,5 GB) i sprawdza, jak szybki jest komputer – to może potrwać kilka minut. Potem start trwa kilka sekund.</p>
+              <img src="img/pierwsze-uruchomienie.png" alt="Panel pierwszego uruchomienia: pobieranie modelu rozpoznawania mowy z paskiem postępu" loading="lazy">
               <p>Gotowe. Zostaw okno aplikacji otwarte (może być zminimalizowane): sama rozpocznie zapis, gdy zacznie się sesja. Przy zamykaniu okna aplikacja zapyta o potwierdzenie.</p>
               <img src="img/ekran-glowny.png" alt="Ekran główny aplikacji czekającej na sesję" loading="lazy">
             </div>
@@ -151,7 +152,7 @@
           <li>
             <div>
               <h3 id="gemini">Opcjonalnie: darmowy klucz Gemini do podsumowań</h3>
-              <p>Podsumowania i pytania korzystają z AI Google Gemini – bezpłatnie, z dziennym limitem.</p>
+              <p>Podsumowania i pytania korzystają z AI Google Gemini – bezpłatnie, z dziennym limitem (odnawia się o północy czasu pacyficznego, czyli o 9:00 polskiego czasu). Limit liczy się dla całego projektu Google, nie dla klucza: jeśli używasz tego samego projektu w innych aplikacjach, zużywają one ten sam limit – wtedy najlepiej utworzyć dla Sesji osobny projekt.</p>
               <p>Wejdź na <a href="https://aistudio.google.com/apikey">aistudio.google.com/apikey</a> i zaloguj się kontem Google. Kliknij <strong>Create API key</strong> w prawym górnym rogu.</p>
               <img src="img/gemini-1.png" alt="Google AI Studio, lista kluczy API z wyróżnionym przyciskiem Create API key" loading="lazy">
               <p>W okienku zostaw proponowaną nazwę, wybierz projekt (przy pierwszym kluczu AI Studio utworzy go samo) i kliknij <strong>Create key</strong>.</p>

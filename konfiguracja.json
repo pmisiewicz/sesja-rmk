@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.4",
+  "najnowsza_wersja": "0.2.5",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Stabilniejsza transkrypcja (bez minutowych przestojów), menu Pobierz: transkrypt i podsumowanie w osobnych PDF, Asystent AI na tańszym modelu, poprawki pasków i głosowań.",
+  "opis": "Podsumowanie AI odporne na przeciążenie Gemini, widoczny postęp generowania, stabilniejsze łącze z transmisją i mniejsze zużycie pamięci",
   "slownik": [
     "Gibała",
     "Wałachowski",
@@ -64,5 +64,19 @@
     "Łobzów",
     "Czyżyny"
   ],
-  "adres_strumienia": "https://hls.cyfronet.pl/hls/rmk/rmklive/index.m3u8"
+  "adres_strumienia": "https://hls.cyfronet.pl/hls/rmk/rmklive/index.m3u8",
+  "gemini": {
+    "limity_dzienne": {
+      "lite": 500,
+      "flash": 20
+    },
+    "limity_minutowe": {
+      "lite": 15,
+      "flash": 5
+    },
+    "model_zapasowy": "gemini-2.5-flash",
+    "pomijane_modele": [
+      "gemini-2.5-flash-lite"
+    ]
+  }
 }
