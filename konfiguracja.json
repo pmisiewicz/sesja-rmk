@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.8",
+  "najnowsza_wersja": "0.2.9",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Po ponownym uruchomieniu w trakcie sesji aplikacja dociąga ostatnie minuty transmisji i nie zgłasza fałszywej przerwy przed obradami.",
+  "opis": "Podgląd transmisji na żywo nie zostaje już w tyle, a tytuły punktów obrad nie mają doklejonych napisów z ekranu.",
   "slownik": [
     "Gibała",
     "Wałachowski",
