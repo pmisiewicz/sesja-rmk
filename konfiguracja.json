@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.7",
+  "najnowsza_wersja": "0.2.8",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Aplikacja nie kończy już startu błędem, a od kliknięcia widać ekran powitalny.",
+  "opis": "Po ponownym uruchomieniu w trakcie sesji aplikacja dociąga ostatnie minuty transmisji i nie zgłasza fałszywej przerwy przed obradami.",
   "slownik": [
     "Gibała",
     "Wałachowski",
