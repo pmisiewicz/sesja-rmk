@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.9",
+  "najnowsza_wersja": "0.2.10",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Podgląd transmisji na żywo nie zostaje już w tyle, a tytuły punktów obrad nie mają doklejonych napisów z ekranu.",
+  "opis": "Sesja na żywo: przycisk powrotu na dół po ponownym uruchomieniu, bez powtórzonego punktu obrad, mniej komunikatów o przerwach i tytuły punktów bez napisów.",
   "slownik": [
     "Gibała",
     "Wałachowski",
