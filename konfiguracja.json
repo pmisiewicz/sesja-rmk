@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.10",
+  "najnowsza_wersja": "0.2.11",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Sesja na żywo: przycisk powrotu na dół po ponownym uruchomieniu, bez powtórzonego punktu obrad, mniej komunikatów o przerwach i tytuły punktów bez napisów.",
+  "opis": "Sesja na żywo kończy się sama, gdy po obradach transmisja zamienia się w nagranie (bez planszy testowej).",
   "slownik": [
     "Gibała",
     "Wałachowski",
