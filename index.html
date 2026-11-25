@@ -45,6 +45,8 @@
     .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 10px; font-weight: 650; text-decoration: none; font-size: 17px; }
     .btn.primary { background: var(--accent); color: var(--accent-text); }
     .dl-icon { width: 20px; height: 20px; flex: none; }
+    .btn .wersja { margin-left: 2px; padding: 2px 9px; border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: .02em;
+      font-variant-numeric: tabular-nums; background: color-mix(in srgb, var(--accent-text) 18%, transparent); }
     .btn.ghost { border: 1px solid var(--line); color: var(--text); background: var(--surface); }
     .small { font-size: 14px; color: var(--muted); }
     main .wrap { padding-block: 36px 64px; display: grid; gap: 56px; }
@@ -94,7 +96,7 @@
       <h1>Sesja na żywo – Rada Miasta Krakowa</h1>
       <p class="lead">Aplikacja sama słucha transmisji sesji Rady Miasta Krakowa i na bieżąco zapisuje, co się mówi, który punkt obrad trwa i jak wypadły głosowania. Po sesji przygotuje podsumowanie i odpowie na pytania o jej przebieg.</p>
       <div class="cta">
-        <a id="download" class="btn primary" href="https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip"><svg class="dl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/><path d="M4 16v3.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V16"/></svg> Pobierz dla Windows</a>
+        <a id="download" class="btn primary" href="https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip"><svg class="dl-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m6.5 9.5 5.5 5.5 5.5-5.5"/><path d="M4 16v3.5a1.5 1.5 0 0 0 1.5 1.5h13a1.5 1.5 0 0 0 1.5-1.5V16"/></svg> Pobierz dla Windows <span class="wersja">v0.2.11</span></a>
         <a class="btn ghost" href="#jak-zaczac">Instrukcja instalacji i uruchomienia</a>
       </div>
       <p class="small">Działa na zwykłym laptopie, bez instalacji i bez uprawnień administratora. Rozpoznawanie mowy odbywa się na Twoim komputerze. Projekt niezależny – nie jest usługą Urzędu Miasta Krakowa.</p>
