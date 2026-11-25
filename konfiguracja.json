@@ -1,7 +1,7 @@
 {
-  "najnowsza_wersja": "0.2.6",
+  "najnowsza_wersja": "0.2.7",
   "link": "https://github.com/pmisiewicz/sesja-rmk/releases/latest/download/SesjaRMK-windows.zip",
-  "opis": "Asystent AI ponawia zapytania przy przeciążeniu Gemini i podaje właściwą przyczynę, wygodniejsze pole pytania",
+  "opis": "Aplikacja nie kończy już startu błędem, a od kliknięcia widać ekran powitalny.",
   "slownik": [
     "Gibała",
     "Wałachowski",
